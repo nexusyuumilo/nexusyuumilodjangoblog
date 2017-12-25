@@ -1,0 +1,54 @@
+<!--拡張用ベース-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+    <!--mdl-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <title>ブログを作ろう</title>
+  </head>
+
+  <body>
+    <div id="page-header">
+      <div class="blog-title">
+        <h4><a href="/">ブログを作ろう</a></h4>
+      </div>
+      <div class="category-button">
+        {% for category in category_list %}
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="location.href='{% url 'blog:category' category.id %}'">
+          <p>{{category.category_name}}</p>
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="profile">
+      <div class="profile-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h4>Profile</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+          name: Yuu
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            More
+          </a>
+        </div>
+        <div class="mdl-card__menu">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="contents">
+      {% block content %}
+      <!--ここに表示-->
+      {% endblock %}
+    </div>
+  </body>
+</html>

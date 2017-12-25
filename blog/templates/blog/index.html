@@ -1,0 +1,38 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<!--baseを拡張-->
+
+{% if latest_post_list %}
+<div id="latest_post_list">
+  <ul class="post_list">
+  {% for post in latest_post_list %}
+      <div class="post-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h4>{{post.post_title}}</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p>{{post.post_text}}</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{% url 'blog:detail' post.id %}">
+            More
+          </a>
+        </div>
+        <div class="mdl-card__menu">
+
+        </div>
+      </div>
+      <!--
+      <a class="post_card_title" href="{% url 'blog:detail' post.id %}">{{post.post_title}}</a>
+      <p class="post_card_text">{{post.post_text}}</p>
+      <a class="post_card_more" href="{% url 'blog:detail' post.id %}">...More</a>
+      -->
+      {% endfor %}
+  </ul>
+</div>
+{% else %}
+  <h2 class="no_post">記事がありません</h2>
+{% endif %}
+
+<!--拡張終わり-->
+{% endblock content %}

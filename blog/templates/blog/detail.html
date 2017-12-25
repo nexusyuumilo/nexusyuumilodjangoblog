@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<!--baseを拡張-->
+<div class="post-detail-card mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2>{{post.post_title}}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <p>{{post.post_text}}</p>
+  </div>
+  <div class="mdl-card__menu">
+
+  </div>
+</div>
+<!--拡張終わり-->
+{% endblock content %}

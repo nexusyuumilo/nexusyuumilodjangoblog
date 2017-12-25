@@ -1,0 +1,111 @@
+/*
+dark primary color:   #0288D1
+light primary color:  #B3E5FC
+primary color:        #03A9F4
+text/icons:           #FFFFFF
+accent color:         #FF4081
+primaty text:         #212121
+secondary text:       #757575
+devider color:        #BDBDBD
+*/
+
+/*****　　　すべて　　　*****/
+
+a {
+  text-decoration: none;  /*リンクの下線を消す*/
+}
+
+/*****　　　ヘッダー　　　*****/
+
+#page-header {
+  background-color: #03A9F4;
+  height: 50px;
+}
+div.blog-title {
+  float: left;
+  height: 40px;
+  width: 170px;
+  margin: 10px 10px;
+}
+div.blog-title h4 {
+  margin: 0px;
+}
+div.blog-title a {
+  color: #FFFFFF;
+  text-align: center;
+}
+.category-button {
+  float: left;
+  width: 600px;
+  height: 40px;
+  padding: 10px 10px;
+}
+.category-button button {
+  height: 30px;
+  margin: 1px 10px;
+}
+.category-button p {
+  font-size: 14px;
+  margin: auto;
+}
+
+/*****　　　ボディ　　　*****/
+body {
+
+}
+/*プロフィール欄*/
+.profile {
+  width: 20%;
+  float: right;
+}
+.profile > .profile-card-wide.mdl-card {
+  width: 90%;
+  height: 300px;
+  float: right;
+  margin: 14px;
+  margin-top: 20px;
+}
+.profile-card-wide > .mdl-card__title {
+  background-color: #FF4081;
+  color: white;
+  height: 40px;
+}
+
+/*コンテンツ*/
+ul.post_list {
+  margin: 0px;
+}
+div.contents {
+  width: 80%;
+  float: left;
+}
+
+/***index.html***/
+/*記事リスト*/
+.post-card-wide.mdl-card {
+  width: 45%;
+  height: 300px;
+  float: left;
+  margin: 14px;
+}
+.post-card-wide > .mdl-card__title {
+  background-color: #03A9F4;
+  color: white;
+  height: 40px;
+}
+.mdl-card__supporting-text p{
+  overflow: hidden;
+}
+.mdl-card__title > h4 {
+  margin: 0px;
+}
+h2.no_post {
+  margin: 50px 30px;
+}
+
+/***detail.html***/
+/***記事詳細***/
+.post-detail-card.mdl-card {
+    width: 90%;
+    margin: 14px auto;
+}
